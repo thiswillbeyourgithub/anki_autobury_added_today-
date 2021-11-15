@@ -1,4 +1,9 @@
 # anki_autobury_added_today 
 
-I use a cron job to call this script every hour. It uses anki connect to bury the cards that have been added today and have not been buried.
+## what is this?
+A script that buries anki cards that have been added today but have not been buried.
+
+## Anything worth mentioning?
+* I use a cron job to call this script every hour.
+* This scripts needs the [ankiconnect](https://ankiweb.net/shared/info/2055492159) addon, possibly only my fork as the author has not yet approved of my commits that allow to bury cards.
 
