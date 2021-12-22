@@ -17,7 +17,8 @@ def ankiconnect(action, **params):
                 'http://localhost:8765',
                 requestJson)))
     except (ConnectionRefusedError, urllib.error.URLError) as e:
-        raise Exception(f"{e}: is Anki open and ankiconnect enabled?")
+        # Anki is probably not running, exiting without print
+        raise SystemExit()
 
     if len(response) != 2:
         raise Exception('response has an unexpected number of fields')
@@ -32,7 +33,8 @@ def ankiconnect(action, **params):
 
 not_buried = ankiconnect(action="findCards", query="added:1 -is:buried")
 if not_buried:
-    print(f"Burying {len(not_buried)} cards.")
+    #print(f"Burying {len(not_buried)} cards.")
     ankiconnect(action="bury", cards=not_buried)
 else:
-    print("No cards to bury.")
+    # no cards to bury, exiting without printing anything
+    raise SystemExit()
