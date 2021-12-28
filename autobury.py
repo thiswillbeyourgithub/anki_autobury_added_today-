@@ -31,7 +31,7 @@ def ankiconnect(action, **params):
     return response['result']
 
 
-not_buried = ankiconnect(action="findCards", query="added:1 -is:buried")
+not_buried = ankiconnect(action="findCards", query="added:1 is:new -is:buried")
 if not_buried:
     #print(f"Burying {len(not_buried)} cards.")
     ankiconnect(action="bury", cards=not_buried)
