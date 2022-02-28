@@ -14,7 +14,7 @@ def ankiconnect(action, **params):
     try:
         response = json.load(urllib.request.urlopen(
             urllib.request.Request(
-                'http://localhost:8765',
+                'http://localhost:8775',
                 requestJson)))
     except (ConnectionRefusedError, urllib.error.URLError) as e:
         # Anki is probably not running, exiting without print
