@@ -1,5 +1,7 @@
 # anki_autobury_added_today 
 
+**Check out my other Anki and AI related projects on my [GitHub profile](https://github.com/thiswillbeyourgithub)!**
+
 ## what is this?
 A script that buries anki cards that have been added today but have not been buried.
 
